@@ -1,0 +1,45 @@
+env7.cmd
+=====================
+SET JAVA_HOME=C:\opt\Java\jdk1.7.0_79
+SET ANT_HOME=C:\opt\apache-ant-1.9.6
+SET JOBSS_HOME=C:\a0\jboss\7.1.1
+SET MAVEN_HOME=C:\opt\apache-maven-3.2.5
+SET M2_HOME=C:\opt\apache-maven-3.2.5
+
+set ANT_OPTS=-Xmx450m -Xss32m
+
+SET CLASSPATH=%CLASSPATH%;C:\opt\selenium-2.48.2\libs\
+SET PATH=%JAVA_HOME%/bin;%ANT_HOME%/bin;%JBOSS_HOME%/bin;%MAVEN_HOME%/bin;%PATH%;
+
+env8
+=====================
+SET JAVA_HOME=C:\opt\Java\jdk1.8.0_73
+SET ANT_HOME=C:\opt\apache-ant-1.9.6
+SET JOBSS_HOME=C:\a0\jboss\7.1.1
+SET MAVEN_HOME=C:\opt\apache-maven-3.2.5
+SET M2_HOME=C:\opt\apache-maven-3.2.5
+
+set ANT_OPTS=-Xmx450m -Xss32m
+
+SET CLASSPATH=%CLASSPATH%;C:\opt\selenium-2.48.2\libs\
+SET PATH=%JAVA_HOME%/bin;%ANT_HOME%/bin;%JBOSS_HOME%/bin;%MAVEN_HOME%/bin;%PATH%;
+
+
+
+mongo
+=========================
+C:\a0\mongodb\3.2\bin\mongod.exe --dbpath C:\d0\mongodb\3.2
+
+
+ant
+=====================
+SET JAVA_HOME="C:\Program Files (x86)\IBM\SDP\jdk"
+SET ANT_HOME=C:\opt\apache-ant-1.9.6
+SET JOBSS_HOME=C:\a0\jboss\7.1.1
+SET MAVEN_HOME=C:\opt\apache-maven-3.2.5
+SET M2_HOME=C:\opt\apache-maven-3.2.5
+
+set ANT_OPTS=-Xmx450m -Xss32m
+
+SET CLASSPATH=%CLASSPATH%;C:\opt\selenium-2.48.2\libs\
+SET PATH=%JAVA_HOME%\bin;%ANT_HOME%\bin;%JBOSS_HOME%\bin;%MAVEN_HOME%\bin;%PATH%;

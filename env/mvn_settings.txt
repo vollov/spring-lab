@@ -1,0 +1,25 @@
+[1] proxy
+	<proxy>
+      <id>userxxx</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <username>xxx</username>
+      <password>xxxx</password>
+      <host>pxy02</host>
+      <port>80</port>
+    </proxy>
+</proxies>
+
+[2] local repo
+<localRepository>C:\opt\local_repo</localRepository>
+
+[3] jboss deploy
+	<profile>
+        <id>jboss-deploy</id>
+        <activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+        <properties>
+            <deploy.pass.prod>xxxxx</deploy.pass.prod>
+        </properties>
+    </profile>

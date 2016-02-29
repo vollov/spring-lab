@@ -1,0 +1,47 @@
+[1] set user
+$CATALINA_HOME/conf/tomcat-users.xml
+
+<?xml version='1.0' encoding='utf-8'?>
+<tomcat-users>
+
+	<role rolename="manager-gui"/>
+	<role rolename="manager-script"/>
+	<user username="admin" password="password" roles="manager-gui,manager-script" />
+
+</tomcat-users>
+
+
+[2] reference
+http://www.disasterarea.co.uk/blog/deploying-to-tomcat-7-with-maven/
+http://www.mkyong.com/maven/how-to-deploy-maven-based-war-file-to-tomcat/
+
+[3] mvn settings
+<server>
+			<id>TomcatServer</id>
+			<username>admin</username>
+			<password>password</password>
+		</server>
+
+[4] pom.xml
+
+	<build>
+		<finalName>hello</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>http://localhost:8080/manager/text</url>
+					<server>TomcatServer</server>
+					<path>/${project.build.finalName}</path>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+[5] deploy
+mvn tomcat7:deploy 
+mvn tomcat7:undeploy 
+mvn tomcat7:redeploy
+	
