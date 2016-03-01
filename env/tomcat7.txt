@@ -1,0 +1,16 @@
+apt-get update
+apt-get install tomcat7
+nano /etc/default/tomcat7
+JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC"
+
+service tomcat7 restart
+
+
+apt-get install tomcat7-admin
+vi /etc/tomcat7/tomcat-users.xml
+
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-14-04
+groupadd tomcat
+useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
