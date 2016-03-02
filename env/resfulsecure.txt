@@ -1,0 +1,5 @@
+https://github.com/imrabti/gwtp-spring-security
+https://dzone.com/articles/secure-rest-services-using
+
+https://github.com/malalanayake/spring-security/tree/master/spring.security.rest.api
+https://malalanayake.wordpress.com/2014/06/27/spring-security-on-rest-api/
