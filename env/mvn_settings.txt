@@ -23,3 +23,9 @@
             <deploy.pass.prod>xxxxx</deploy.pass.prod>
         </properties>
     </profile>
+    
+[4] web env
+mvn archetype:create 
+  -DgroupId=[your project's group id]
+  -DartifactId=[your project's artifact id]
+  -DarchetypeArtifactId=maven-archetype-webapp
