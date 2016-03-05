@@ -1,0 +1,4 @@
+2016-03-04 16:25:41,914 WARN  [RestTemplate] - POST request for "http://localhost:8080/rest-hello/v1.0/rest/users" resulted in 404 (Not Found); invoking error handler
+2016-03-04 16:25:41,930 WARN  [RestTemplate] - DELETE request for "http://localhost:8080/rest-hello/v1.0/rest/users/3" resulted in 403 (Forbidden); invoking error handler
+2016-03-04 16:25:41,945 WARN  [RestTemplate] - GET request for "http://localhost:8080/rest-hello/v1.0/rest/users" resulted in 404 (Not Found); invoking error handler
+2016-03-04 16:25:41,955 WARN  [RestTemplate] - PUT request for "http://localhost:8080/rest-hello/v1.0/rest/users/3" resulted in 403 (Forbidden); invoking error handler
