@@ -14,3 +14,20 @@ vi /etc/tomcat7/tomcat-users.xml
 https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-14-04
 groupadd tomcat
 useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
+
+========
+remote debug
+
+1) Enabling the JPDA Debugger in your Tomcat JVM
+-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n
+or
+-Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n
+
+/usr/share/tomcat7/bin
+add JPDA to catalina.sh by:
+$ catalina.sh jpda start
+or
+$ export JPDA_ADDRESS=8001
+$ catalina.sh jpda start
+
+
