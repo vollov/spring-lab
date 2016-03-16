@@ -1,0 +1,13 @@
+mvn archetype:generate -DarchetypeGroupId=net.avh4.mvn.archetype -DarchetypeArtifactId=java-1.6-archetype
+
+Define value for property 'groupId': : org.arquillian.example <ENTER>
+Define value for property 'artifactId': : arquillian-tutorial <ENTER>
+Define value for property 'version': : <ENTER>
+Define value for property 'package': : <ENTER>
+Confirm properties configuration:
+groupId: org.arquillian.example
+artifactId: arquillian-tutorial
+version: 1.0-SNAPSHOT
+package: org.arquillian.example
+Y: : <ENTER>
+
