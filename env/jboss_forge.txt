@@ -1,0 +1,24 @@
+FORGE_HOME
+
+SET JAVA_HOME=C:\opt\Java\jdk1.7.0_79
+SET ANT_HOME=C:\opt\apache-ant-1.9.6
+SET JOBSS_HOME=C:\a0\jboss\7.1.1
+SET MAVEN_HOME=C:\opt\apache-maven-3.2.5
+SET M2_HOME=C:\opt\apache-maven-3.2.5
+SET FORGE_HOME=C:\opt\forge-1.0.0
+set ANT_OPTS=-Xmx450m -Xss32m
+
+SET CLASSPATH=%CLASSPATH%;C:\opt\selenium-2.48.2\libs\
+SET PATH=%JAVA_HOME%/bin;%ANT_HOME%/bin;%JBOSS_HOME%/bin;%MAVEN_HOME%/bin;%PATH%;%FORGE_HOME%/bin
+
+$forge
+$ new-project --named jpa-test --topLevelPackage org.demo.jpa
+$ beans setup
+$ beans new-bean --type org.demo.jpa.SimpleBean --scoped DEPENDENT
+
+
+$ project-remove-repository --url http://repository.jboss.org/nexus/content/groups/public
+
+project-add-dependencies org.jboss.spec:jboss-javaee-6.0:1.0.0.Final:provided:pom
+$ project-add-dependencies junit:junit:4.8.1:test
+ 
