@@ -1,0 +1,29 @@
+D:\a0\jboss\7.1.1\modules\com\mysql\main
+module.xml
+<module xmlns="urn:jboss:module:1.1" name="com.mysql">
+   <resources>
+     <resource-root path="mysql-connector-java-5.1.18.jar"/>
+   </resources>
+
+   <dependencies>
+      <module name="javax.api"/>
+      <module name="javax.transaction.api"/>
+    </dependencies>
+</module>
+
+D:\a0\jboss\7.1.1\standalone\configuration\standalone-full.xml
+
+<datasource jndi-name="java:jboss/datasources/ticketDS" pool-name="MySQLDS" enabled="true" use-java-context="true">
+    <connection-url>jdbc:mysql://localhost:3306/ticket</connection-url>
+    <driver>mysql</driver>
+    <pool></pool>
+    <security>
+       <user-name>jbpm</user-name>
+       <password>jbpm</password>
+    </security>
+</datasource>
+<drivers>
+    <driver name="mysql" module="com.mysql">
+        <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class>
+    </driver>
+</drivers>
